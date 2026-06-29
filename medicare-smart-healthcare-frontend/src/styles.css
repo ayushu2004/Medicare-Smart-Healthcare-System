@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #e5f7ff; background: #030712; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+.auth-shell { min-height: 100vh; display: grid; grid-template-columns: 1.2fr .8fr; background: radial-gradient(circle at top left, rgba(20,184,166,.28), transparent 34%), radial-gradient(circle at bottom right, rgba(59,130,246,.22), transparent 30%), #030712; }
+.auth-hero { padding: 72px; display: flex; flex-direction: column; justify-content: center; }
+.brand { display: flex; gap: 12px; align-items: center; font-weight: 900; color: #5eead4; font-size: 26px; }
+.brand.small { font-size: 22px; margin-bottom: 24px; }
+.brand svg { color: #22d3ee; }
+.auth-hero h1 { font-size: 58px; line-height: 1.02; margin: 28px 0 18px; max-width: 780px; color: #ffffff; }
+.auth-hero p { font-size: 19px; color: #a7b7c9; max-width: 620px; }
+.hero-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+.feature, .stat, .panel { background: rgba(15, 23, 42, .86); border: 1px solid rgba(94,234,212,.18); border-radius: 22px; box-shadow: 0 20px 60px rgba(0,0,0,.35); backdrop-filter: blur(14px); }
+.feature { padding: 22px; display: grid; gap: 8px; }
+.feature svg, .stat svg { color: #5eead4; }
+.feature span, .muted { color: #9fb0c6; }
+.auth-card { align-self: center; margin: 36px 72px 36px 0; background: rgba(15,23,42,.94); border: 1px solid rgba(94,234,212,.2); padding: 34px; border-radius: 28px; box-shadow: 0 28px 90px rgba(0,0,0,.55); display: grid; gap: 14px; }
+.auth-card h2 { margin: 0; font-size: 32px; color: #ffffff; }
+label { display: grid; gap: 7px; color: #dbeafe; font-weight: 700; }
+input, select, textarea { width: 100%; border: 1px solid #26364f; border-radius: 13px; padding: 12px 14px; background: #0b1220; outline: none; color: #eff6ff; }
+textarea { min-height: 85px; resize: vertical; }
+input::placeholder, textarea::placeholder { color: #708198; }
+input:focus, select:focus, textarea:focus { border-color: #5eead4; box-shadow: 0 0 0 4px rgba(94,234,212,.13); }
+.two-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.primary { border: 0; background: linear-gradient(135deg, #0ea5e9, #14b8a6); color: #fff; border-radius: 14px; padding: 13px 16px; font-weight: 900; box-shadow: 0 12px 28px rgba(20,184,166,.24); }
+.primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.link-btn { border: 0; background: transparent; color: #5eead4; font-weight: 800; }
+.demo-box { display: flex; gap: 8px; flex-wrap: wrap; padding-top: 8px; color: #dbeafe; }
+.demo-box button, .status-row button { border: 1px solid rgba(94,234,212,.28); background: rgba(20,184,166,.12); color: #99f6e4; padding: 7px 10px; border-radius: 999px; font-weight: 800; }
+.demo-box button:hover, .status-row button:hover { background: rgba(20,184,166,.22); }
+.alert { padding: 12px 14px; border-radius: 12px; }
+.error { background: rgba(127,29,29,.35); color: #fecdd3; border: 1px solid rgba(251,113,133,.4); }
+.layout { min-height: 100vh; display: grid; grid-template-columns: 285px 1fr; background: radial-gradient(circle at top right, rgba(14,165,233,.18), transparent 32%), #030712; }
+.sidebar { background: rgba(2,6,23,.94); border-right: 1px solid rgba(148,163,184,.15); padding: 24px; display: flex; flex-direction: column; gap: 18px; position: sticky; top: 0; height: 100vh; }
+.user-card { padding: 17px; background: linear-gradient(135deg, rgba(14,165,233,.17), rgba(20,184,166,.13)); border: 1px solid rgba(94,234,212,.18); border-radius: 18px; display: grid; gap: 5px; }
+.user-card span { color: #94a3b8; font-size: 13px; overflow-wrap: anywhere; }
+.user-card em { width: fit-content; color: #ccfbf1; background: rgba(20,184,166,.22); border: 1px solid rgba(94,234,212,.25); border-radius: 999px; padding: 4px 10px; font-style: normal; font-weight: 900; font-size: 12px; }
+nav { display: grid; gap: 8px; }
+nav button, .logout { display: flex; gap: 10px; align-items: center; border: 0; background: transparent; padding: 12px 13px; border-radius: 13px; color: #b6c2d2; font-weight: 800; text-align: left; }
+nav button.active, nav button:hover { background: rgba(20,184,166,.15); color: #5eead4; }
+.logout { margin-top: auto; color: #fecdd3; background: rgba(127,29,29,.28); }
+.main { padding: 34px; overflow: auto; }
+header { margin-bottom: 24px; }
+header h1 { margin: 0; font-size: 36px; color: #ffffff; }
+header p { color: #94a3b8; }
+.grid { display: grid; gap: 22px; }
+.grid.cards { grid-template-columns: repeat(3, 1fr); }
+.grid.two { grid-template-columns: 380px 1fr; align-items: start; }
+.stat { padding: 24px; display: grid; gap: 8px; }
+.stat span { color: #94a3b8; }
+.stat b { font-size: 24px; color: #ffffff; }
+.panel { padding: 22px; color: #dbeafe; }
+.panel h3 { margin-top: 0; display: flex; gap: 8px; align-items: center; color: #ffffff; }
+.panel.wide { grid-column: span 1; overflow: hidden; }
+.cards .wide { grid-column: 1 / -1; }
+.stack { display: grid; gap: 12px; }
+.table-wrap { overflow: auto; border-radius: 16px; border: 1px solid rgba(148,163,184,.16); }
+table { width: 100%; border-collapse: collapse; background: #07111f; min-width: 760px; }
+th, td { text-align: left; padding: 13px 14px; border-bottom: 1px solid rgba(148,163,184,.13); font-size: 14px; vertical-align: top; color: #dbeafe; }
+th { background: #0b1626; color: #93c5fd; text-transform: capitalize; }
+tr:hover td { background: rgba(20,184,166,.07); }
+.empty { padding: 24px; text-align: center; color: #94a3b8; background: #07111f; border-radius: 14px; border: 1px solid rgba(148,163,184,.14); }
+.permissions { line-height: 1.9; color: #cbd5e1; }
+.status-actions { margin-top: 18px; display: grid; gap: 10px; }
+.status-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+code { background: #111c2f; color: #99f6e4; padding: 2px 6px; border-radius: 6px; }
+@media (max-width: 1000px) {
+  .auth-shell, .layout, .grid.two, .grid.cards, .hero-grid { grid-template-columns: 1fr; }
+  .auth-hero { padding: 34px; }
+  .auth-hero h1 { font-size: 38px; }
+  .auth-card { margin: 0 20px 30px; }
+  .sidebar { position: static; height: auto; }
+}
