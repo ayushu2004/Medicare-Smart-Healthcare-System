@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://medicare-smart-healthcare-system-3.onrender.com/api';
+export const API_BASE_URL =  import.meta.env.VITE_API_BASE_URL || 'https://medicare-smart-healthcare-system-10.onrender.com/api';
 
 export function getToken() {
   return localStorage.getItem('medicare_token');
